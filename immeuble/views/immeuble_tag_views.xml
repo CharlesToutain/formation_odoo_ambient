@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- VIEW FORM -->
+    <record id="immeuble_tag_form_view" model="ir.ui.view">
+        <field name="name">immeuble.tag.form</field>
+        <field name="model">immeuble.tag</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="parent_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- VIEW TREE -->
+    <record id="immeuble_tag_tree_view" model="ir.ui.view">
+        <field name="name">immeuble.tree</field>
+        <field name="model">immeuble.tag</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="parent_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- ACTION -->
+    <record id="action_immeuble_tag" model="ir.actions.act_window">
+        <field name="name">Immeuble Tag</field>
+        <field name="res_model">immeuble.tag</field>
+        <field name="view_mode">tree,form,kanban,graph,pivot</field>
+    </record>
+
+    <menuitem id="immeuble_tag_menu"
+            name="Immeuble Tag"
+            action="action_immeuble_tag"
+            parent="contacts.menu_contacts"
+            sequence="3"/>
+
+</odoo>

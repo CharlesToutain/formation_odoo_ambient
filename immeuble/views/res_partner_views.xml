@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_partner_form_view" model="ir.ui.view">
+        <field name="name">res.partner.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Immeuble" name="immeuble">
+                    <field name="immeuble_ids">
+                        <tree 
+                            string="Immeuble"
+                            editable="bottom" 
+                            delete="0"
+                            decoration-danger="value_estimated == 0"
+                            decoration-info="value_estimated > 0"
+                        >
+                            <field name="name"/>
+                            <field name="value_estimated"/>
+                            <field name="nb_etage"/>
+                            <field name="city"/>
+                            <field name="country_id"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
