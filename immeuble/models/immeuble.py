@@ -26,3 +26,7 @@ class Immeuble(models.Model):
         'res.partner',
         string='Propriétaire'
     )
+    tags_ids = fields.Many2many(
+        'immeuble.tag',
+        string='Tags'
+    )

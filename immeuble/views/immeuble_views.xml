@@ -15,6 +15,11 @@
                         <field name="city"/>
                         <field name="country_id"/>
                         <field name="owner_id"/>
+                        <field 
+                            name="tags_ids" 
+                            widget="many2many_tags"
+                            options="{'no_create': True,'color_field': 'color'}"
+                        />
                     </group>
                 </sheet>
             </form>
@@ -33,6 +38,11 @@
                 <field name="nb_etage"/>
                 <field name="country_id"/>
                 <field name="owner_id"/>
+                <field 
+                    name="tags_ids" 
+                    widget="many2many_tags"
+                    options="{'no_create': True,'color_field': 'color'}"
+                />
             </tree>
         </field>
     </record>
