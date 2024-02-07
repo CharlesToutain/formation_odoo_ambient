@@ -12,10 +12,13 @@
         'contacts',
     ],
     'data': [
+        # DATA
+        'data/immeuble_tag_data.xml',
         'security/ir.model.access.csv',
         'views/immeuble_views.xml',
         'views/res_partner_views.xml',
         'views/immeuble_tag_views.xml',
+        'views/immeuble_offre_views.xml',
     ],
     # 'demo': [
     #     ''

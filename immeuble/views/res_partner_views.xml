@@ -18,7 +18,7 @@
                         >
                             <field name="name"/>
                             <field name="value_estimated"/>
-                            <field name="nb_etage"/>
+                            <field name="nb_etage" />
                             <field name="city"/>
                             <field name="country_id"/>
                         </tree>

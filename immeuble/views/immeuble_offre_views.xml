@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- VIEW TREE -->
+    <record id="immeuble_offre_tree_view" model="ir.ui.view">
+        <field name="name">immeuble.offre.tree</field>
+        <field name="model">immeuble.offre</field>
+        <field name="arch" type="xml">
+            <tree editable="top" create="1">
+                <field name="name"/>
+                <field name="immeuble_id"/>
+                <field name="owner_id"/>
+                <field name="offreur_id"/>
+                <field name="amount" widget="monetary"/>
+                <field name="company_currency_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- ACTION -->
+    <record id="action_immeuble_offre" model="ir.actions.act_window">
+        <field name="name">Immeuble Offre</field>
+        <field name="res_model">immeuble.offre</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem id="immeuble_offre_menu"
+            name="Offres"
+            action="action_immeuble_offre"
+            parent="contacts.menu_contacts"
+            sequence="2"/>
+
+</odoo>
